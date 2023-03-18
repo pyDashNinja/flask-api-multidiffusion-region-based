@@ -1,0 +1,7 @@
+opencv-python
+transformers
+diffusers
+accelerate
+torchvision
+scikit-learn
+scikit-image
