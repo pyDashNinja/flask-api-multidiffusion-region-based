@@ -2,11 +2,12 @@
 
 Special thanks to : weizmannscience/multidiffusion-region-based .. All credit goes to him .. I have just added flask API on top.
 
-
+``
 IP : “0.0.0.0:5000/multsd”
+``
 You will need to do a post request with json object to IP given above.
-Json Object Will have these parameters And Basic Authorization
-basic auth : username = <username> , password = <password>
+Json Object Will have these parameters 
+``
 json object : {
 "bg_prompt" : "futuristic sci fi spaceship, star citizen, star atlas, render,",
 "bg_nprompt" : "(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon,
@@ -24,7 +25,9 @@ artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands"],
 "masks" :
 ["base64StringImage"]
 }
-Note : Here
+``
+
+#### Note :
 1 - bg_prompts is a string – its the prompts for the background generation
 2 – bg_nprompt is a string – its a negative prompts for the background
 3 – fg_prompt is list of strings – it has multiple strings (prompts) it will be a list of prompts depend on
