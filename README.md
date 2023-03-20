@@ -46,3 +46,16 @@ that you can send multiple mask with base64images and these are the fg (foregrou
 fg_prompt and fg_nprompt as well.
 Image Generated through this exampple.
 
+
+## Setup
+
+``
+git clone https://github.com/pyDashNinja/flask-api-multidiffusion-region-based.git
+cd flask-api-multidiffusion-region-based
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python main.py
+``
+
+Enjoy!!
