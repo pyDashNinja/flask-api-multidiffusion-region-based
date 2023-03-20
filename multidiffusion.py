@@ -1,22 +1,15 @@
 from transformers import CLIPTextModel, CLIPTokenizer
 from diffusers import AutoencoderKL, UNet2DConditionModel, DDIMScheduler
 
-# suppress partial model loading warning
-# logging.set_verbosity_error()
-
 import torch
 import torch.nn as nn
 import torchvision.transforms as T
-import argparse
 import numpy as np
-from PIL import Image
 
 
 def seed_everything(seed):
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
-    # torch.backends.cudnn.deterministic = True
-    # torch.backends.cudnn.benchmark = True
 
 
 def get_views(panorama_height, panorama_width, window_size=64, stride=8):
@@ -179,27 +172,11 @@ def multsd(sd, masks, bg_prompt, bg_negative, fg_prompt, fg_negative, H=512, W=5
 
     device = torch.device('cuda')
 
-    # sd = MultiDiffusion(device, opt.sd_version)
-    # print(opt.mask_paths)
-
     fg_masks = torch.cat([preprocess_mask(mask, H // 8, W // 8, device) for mask in masks])
     bg_mask = 1 - torch.sum(fg_masks, dim=0, keepdim=True)
     bg_mask[bg_mask < 0] = 0
     masks = torch.cat([bg_mask, fg_masks])
-    # print(opt.bg_prompt, "---", opt.fg_prompts)
-    # print(opt.bg_negative, "---", opt.fg_negative)
-    # prompts = []
-    # prompts.append(bg_prompt)
-    # prompts.append(fg_prompt)
-    # neg_prompts = []
-    # neg_prompts.append(bg_negative)
-    # neg_prompts.append(fg_negative)
-    # print(masks.shape)
-    # print(prompts)
-    # print(neg_prompts)
-    # print(fg_prompt)
-    # print([bg_prompt])
-    # prompts = [bg_prompt] + fg_prompt
+
     prompts = []
     prompts.append(bg_prompt)
     for d in fg_prompt:
@@ -209,10 +186,6 @@ def multsd(sd, masks, bg_prompt, bg_negative, fg_prompt, fg_negative, H=512, W=5
     print(fg_negative)
     for d in fg_negative:
         neg_prompts.append(d)
-    # neg_prompts = [bg_negative] + fg_negative
-    print(masks.shape)
-    print(prompts)
-    print(neg_prompts)
 
     img = sd.generate(masks, prompts, neg_prompts, H, W, steps, bootstrapping=boostrapping)
 

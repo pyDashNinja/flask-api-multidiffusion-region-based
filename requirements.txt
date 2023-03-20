@@ -5,3 +5,6 @@ accelerate
 torchvision
 scikit-learn
 scikit-image
+pillow
+flask
+flask_cors
