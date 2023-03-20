@@ -2,12 +2,12 @@
 
 Special thanks to : weizmannscience/multidiffusion-region-based .. All credit goes to him .. I have just added flask API on top.
 
-``
+```
 IP : “0.0.0.0:5000/multsd”
-``
+```
 You will need to do a post request with json object to IP given above.
 Json Object Will have these parameters 
-``
+```
 json object : {
 "bg_prompt" : "futuristic sci fi spaceship, star citizen, star atlas, render,",
 "bg_nprompt" : "(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon,
@@ -25,7 +25,7 @@ artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands"],
 "masks" :
 ["base64StringImage"]
 }
-``
+```
 
 #### Note :
 1 - bg_prompts is a string – its the prompts for the background generation
@@ -49,13 +49,13 @@ Image Generated through this exampple.
 
 ## Setup
 
-``
+```
 git clone https://github.com/pyDashNinja/flask-api-multidiffusion-region-based.git
 cd flask-api-multidiffusion-region-based
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python main.py
-``
+```
 
 Enjoy!!
