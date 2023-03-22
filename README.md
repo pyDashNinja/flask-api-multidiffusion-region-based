@@ -28,8 +28,8 @@ artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands"],
 ```
 
 #### Note :
-1 - bg_prompts is a string – its the prompts for the background generation
-2 – bg_nprompt is a string – its a negative prompts for the background
+* bg_prompts is a string – its the prompts for the background generation
+* bg_nprompt is a string – its a negative prompts for the background
 3 – fg_prompt is list of strings – it has multiple strings (prompts) it will be a list of prompts depend on
 number of mask you sent it will have that number of strings(prompts) , here in above example it has
 one mask so one prompt in the list ["a Husky dog"]
