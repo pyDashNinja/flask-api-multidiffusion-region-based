@@ -30,18 +30,18 @@ artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands"],
 #### Note :
 * bg_prompts is a string – its the prompts for the background generation
 * bg_nprompt is a string – its a negative prompts for the background
-3 – fg_prompt is list of strings – it has multiple strings (prompts) it will be a list of prompts depend on
+* fg_prompt is list of strings – it has multiple strings (prompts) it will be a list of prompts depend on
 number of mask you sent it will have that number of strings(prompts) , here in above example it has
 one mask so one prompt in the list ["a Husky dog"]
-4 - fg_nprompt it is the negative prompts for fore ground or mask it is also a list of strings it will follow
+* fg_nprompt it is the negative prompts for fore ground or mask it is also a list of strings it will follow
 similar pattern like fg_prompt since fg_prompt has only one prompt string negative prompt for fg will
 also have one string in the list like show above in the example
-5 – width it will be an int number
-6 – height it will be an int number
-7 – ddim_steps it will be an int number
-8 – bootstrapping it will be an int number
-9 – seed it will also be an int number
-10 – masks : it will be list of base64string images [“base64StringImage”, “secondBase64Image”] like
+* width it will be an int number
+* height it will be an int number
+* ddim_steps it will be an int number
+* bootstrapping it will be an int number
+* seed it will also be an int number
+* masks : it will be list of base64string images [“base64StringImage”, “secondBase64Image”] like
 that you can send multiple mask with base64images and these are the fg (foreground) so above whenwe defined fg_prompt if we send two mask we will provide two prompts or two strings in the list in
 fg_prompt and fg_nprompt as well.
 Image Generated through this exampple.
