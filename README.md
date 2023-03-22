@@ -27,7 +27,7 @@ artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands"],
 }
 ```
 
-#### Note :
+## Note :
 * bg_prompts is a string – its the prompts for the background generation
 * bg_nprompt is a string – its a negative prompts for the background
 * fg_prompt is list of strings – it has multiple strings (prompts) it will be a list of prompts depend on
