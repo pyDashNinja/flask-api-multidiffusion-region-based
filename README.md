@@ -57,5 +57,17 @@ source venv/bin/activate
 pip install -r requirements.txt
 python main.py
 ```
+## Update 24 MARCH, 2023
+
+Docker Image available for deploying on runpod.io
+
+```
+docker pull pydashninja/multi-region
+'''
+
+Command to run in runpod.io:
+```
+docker run --gpus all -p 5000:443 multi-region
+```
 
 Enjoy!!
