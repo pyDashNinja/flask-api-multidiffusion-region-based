@@ -60,7 +60,7 @@ python main.py
 
 ## Result
 
-![alt text](./result/result.png)
+![dogimage.jpg](./result/result.jpg)
 
 ## Update 24 MARCH, 2023
 
