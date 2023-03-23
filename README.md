@@ -61,7 +61,7 @@ python main.py
 ## Result
 
 ![dogimage.jpg](./result/result.jpg)
-
+<!-- 
 ## Update 24 MARCH, 2023
 
 Docker Image available for deploying on runpod.io
@@ -75,7 +75,7 @@ Command to run in runpod.io:
 
 ```
 docker run --gpus all -p 5000:443 multi-region
-```
+``` -->
 
 
 Enjoy!!
