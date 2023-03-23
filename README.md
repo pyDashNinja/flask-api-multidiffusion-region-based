@@ -57,6 +57,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 python main.py
 ```
+
+## Result
+
+![alt text](./result/result.png)
+
 ## Update 24 MARCH, 2023
 
 Docker Image available for deploying on runpod.io
