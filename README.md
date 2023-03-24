@@ -67,7 +67,7 @@ python main.py
 Docker Image available for deploying on runpod.io
 
 ```
-docker pull pydashninja/multi-region
+docker pull pydashninja/controlnet-realistic
 ```
 
 Command to run in runpod.io:
